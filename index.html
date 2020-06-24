@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/base.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>クメタのポートフォリオ</title>
 </head>
 
 <body>
@@ -38,9 +40,10 @@
         <div class="l-work">
             <h2 class="l-title">work</h2>
             <div class="l-work_area">
-                <a href="">
-                    <img class="l-work_area_img"
-                        src="img/plant_img.JPG">
+
+                <a class="js-modal-open" data-target="plant-management-system">
+
+                    <img class="l-work_area_img" src="img/plant_img.JPG">
                     <div class="l-work_area_text">
                         <h3>植物監視システム</h3>
                         <div class="Uselanguage1">
@@ -50,10 +53,11 @@
                     </div>
                 </a>
             </div>
+
             <div class="l-work_area">
-                <a href="">
-                    <img class="l-work_area_img"
-                        src="img/TA_img.jpg">
+
+                <a class="js-modal-open" data-target="TA">
+                    <img class="l-work_area_img" src="img/TA_img.jpg">
                     <div class="l-work_area_text">
                         <h3>簡易採点システム</h3>
                         <div class="Uselanguage1">
@@ -63,10 +67,10 @@
                     </div>
                 </a>
             </div>
+
             <div class="l-work_area">
-                <a href="">
-                    <img class="l-work_area_img"
-                        src="img/game_img.png">
+                <a class="js-modal-open" data-target="game">
+                    <img class="l-work_area_img" src="img/game_img.png">
                     <div class="l-work_area_text">
                         <h3>3D障害物回避ゲーム</h3>
                         <div class="Uselanguage1">
@@ -78,6 +82,45 @@
             </div>
         </div>
     </div>
+    <!-- 植物監視システム詳細 -->
+    <div id="plant-management-system" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <img src="./img/plant.png">
+            <p>これは、土中水分を測定し表示するreactのアプリケーションです。<br>
+                センサー情報をpythonで制御し1時間の平均値をデータベースに登録しています。
+                このシステムは、アップデート中でFlaskでの植物の様子をストリーミング配信を現在実装しました。
+                次は、植生を画像で表示するのを作成しています。仕様方式はVARIを使用します。
+                このシステムは、実際に福岡での農園で実験で使用する予定です。
+            </p>
+            <a class="js-modal-close" href="">閉じる</a>
+        </div>
+        <!--modal__inner-->
+    </div>
+    <!--modal-->
+    <!-- 簡易採点詳細 -->
+    <div id="TA" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <p>2</p>
+            <a class="js-modal-close" href="">閉じる</a>
+        </div>
+        <!--modal__inner-->
+    </div>
+    <!--modal-->
+
+    <!-- ゲーム詳細 -->
+    <div id="game"" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <p>game</p>
+            <a class="js-modal-close" href="">閉じる</a>
+        </div>
+        <!--modal__inner-->
+    </div>
+    <!--modal-->
+
+
 </body>
 
 </html>
