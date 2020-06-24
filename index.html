@@ -81,46 +81,73 @@
                 </a>
             </div>
         </div>
+
     </div>
+
     <!-- 植物監視システム詳細 -->
     <div id="plant-management-system" class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
         <div class="modal__content">
-            <img src="./img/plant.png">
-            <p>これは、土中水分を測定し表示するreactのアプリケーションです。<br>
-                センサー情報をpythonで制御し1時間の平均値をデータベースに登録しています。
-                このシステムは、アップデート中でFlaskでの植物の様子をストリーミング配信を現在実装しました。
-                次は、植生を画像で表示するのを作成しています。仕様方式はVARIを使用します。
-                このシステムは、実際に福岡での農園で実験で使用する予定です。
-            </p>
+            <img class="l-modal_img" src="./img/plant.png">
+            <div class="l-modal_text">
+                <h3>植物監視システム</h3>
+                <p>reactアプリケーションです。主に植物の状態をカメラで監視しています。
+                    右の画像は、植物が埋まっている土の状態をグラフ化しています。</p>
+
+                <p>土中水分を測定し1時間の平均値をデータベースに登録します。</p>
+                <p>PythonのFlaskでAPIサーバをたてreactで問い合わせています。</p>
+                <p> このシステムは、福岡の農家さんに使用してもらえる予定です。<br>
+                    現在アップデート中です。
+                </p>
+
+            </div>
             <a class="js-modal-close" href="">閉じる</a>
         </div>
         <!--modal__inner-->
     </div>
     <!--modal-->
-    <!-- 簡易採点詳細 -->
+
+    <!-- 簡易採点システム詳細 -->
     <div id="TA" class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
         <div class="modal__content">
-            <p>2</p>
-            <a class="js-modal-close" href="">閉じる</a>
+            <img class="l-modal_img" src="./img/TA_img.jpg">
+            <div class="l-modal_text">
+                <h3>簡易採点システム</h3>
+                <p>大学院生は、授業の手伝いをする業務があります。
+                その業務の中に採点があります。
+                通常は、授業を3つほど担当しているので採点対象者が非常に多いです。なので、簡易的に採点できるようにプログラムを作成しました。
+                </p>
+                <p>3つの観点から採点し結果をExcelのファイルで出力します。</p>
+                <p>
+                1.ファイルは、提出されているか<br>
+                2．コピーではないか（hashを参照）<br>
+                3．コンパイルできるか（javaプログラム）<br>
+                </p>
+
+            </div>
+            <a class="js-modal-close" href="" >閉じる</a>
         </div>
         <!--modal__inner-->
     </div>
     <!--modal-->
-
     <!-- ゲーム詳細 -->
-    <div id="game"" class="modal js-modal">
+    <div id="game" class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
         <div class="modal__content">
-            <p>game</p>
+            <img class="l-modal_img" src="./img/game_img.png">
+            <div class="l-modal_text">
+                <h3>3D障害物回避ゲーム</h3>
+                <p>ほぼマリオの真似です。</p>
+
+                <p>これを作成したとき、高スペックのPCを所持しておらずステージを作成する段階で自由にモデルを配置できませんでした。</p>
+                <p>しかし、ゲームを作成したいのでunityの作成画面に最低限のモデルを配置してそれらのモデル情報を元にステージをプログラムで作成するようにしました。</p>
+            </div>
             <a class="js-modal-close" href="">閉じる</a>
         </div>
         <!--modal__inner-->
     </div>
     <!--modal-->
-
-
 </body>
 
 </html>
