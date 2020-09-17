@@ -34,6 +34,7 @@
     font-size: 30px;
     color: white;
     letter-spacing: 3px;
+    font-size: 5em;
    }
 .l-title{
     text-align: left;
@@ -46,8 +47,8 @@
 .l-about{
     display: inline-block;
     width: 70%;
-    height: 800px;
-    margin-bottom: 30px;
+    height: 100%;
+    margin-bottom: 10cm;
     
 }
 .l-about_area{
@@ -77,8 +78,8 @@
 .l-work{
     display: inline-block;
     text-align: left;
-    width: 70%;
-    height: 500px;
+    width: 50em;
+    /* height: 500px; */
 }
 
 .l-work_area{
