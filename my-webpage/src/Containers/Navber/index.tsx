@@ -1,19 +1,21 @@
 import React from "react";
 import { css } from "emotion";
 import { Link } from "react-router-dom";
+import logo from "../../Component/img/LOGO.png";
 
 function Navbar() {
   const nav_css = css({
     width: "100%",
-    height: "4em",
-    backgroundColor:"#ffff",
-    borderBottom:"1px solid #d6d6d6",
+    // height: "4em",
+    backgroundColor: "#ffff",
+    borderBottom: "1px solid #d6d6d6",
     textAlign: "left",
+    
   });
 
   const nav_main_css = css({
-    width:"90%"
-  })
+    width: "90%",
+  });
   const link_list_css = css({
     display: "flex",
     justifyContent: "flex-end",
@@ -23,6 +25,7 @@ function Navbar() {
     fontSize: "1.3em",
     color: "black",
     textDecoration: "none",
+   
     ":hover": {
       color: "#009688",
     },
@@ -31,13 +34,14 @@ function Navbar() {
   return (
     <div className={nav_css}>
       <div className={nav_main_css}>
-        <div>
+      <div className={link_list_css}>
+        
+        <div className={css({justifyContent: "flex-start",})}>
           <Link to="/" className={link_css}>
-            KUMETA
+            <img src={logo} alt="logo" />
           </Link>
         </div>
 
-        <div className={link_list_css}>
           <div>
             <Link to="/" className={link_css}>
               ホーム

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { css } from "emotion";
-const skill = css({
+import Java from "./Java";
+import Js from "./JS";
+
+const skillcss = css({
   display: "inline-block",
   textAlign: "left",
-  width: "850px",
+  Width: "850px",
 });
 const liststyle = css({
   display: "block",
@@ -26,18 +29,49 @@ const listStyle_li = css({
     color: "#009688",
   },
 });
-function Work() {
-  const [selectskill, setsklii] = useState("");
 
+enum skill_list {
+  java = "JAVA",
+  js = "JS",
+  python = "PYTHON",
+  aws = "AWS",
+  esp = "ESP32",
+  rspi = "RSPI",
+}
+function Work() {
+  const [skill, setsklii] = useState(skill_list.java);
+  var skill_view = <p>test</p>;
+  switch (skill) {
+    case skill_list.java:
+      skill_view = <Java />;
+      break;
+    case skill_list.js:
+      skill_view =  <Js/>;
+      break;
+
+    default:
+      break;
+  }
   return (
-    <div className={skill}>
-      <div className={liststyle}>
-        <div className={listStyle_li}>Java</div>
-        <div className={listStyle_li}>JavaScript, TypeScript</div>
-        <div className={listStyle_li}>Python</div>
-        <div className={listStyle_li}>AWS</div>
-        <div className={listStyle_li}>ESP32</div>
-        <div className={listStyle_li}>ラズベリーパイ</div>
+    <div className={skillcss}>
+      <div className={css({ display: "flex" })}>
+        <div className={liststyle}>
+          <div
+            className={listStyle_li}
+            onClick={() => setsklii(skill_list.java)}
+          >
+            Java
+          </div>
+                  <div className={listStyle_li}
+                    onClick={() => setsklii(skill_list.js)}
+          
+                  >JavaScript</div>
+          <div className={listStyle_li}>Python</div>
+          <div className={listStyle_li}>AWS</div>
+          <div className={listStyle_li}>ESP32</div>
+          <div className={listStyle_li}>ラズベリーパイ</div>
+        </div>
+        {skill_view}
       </div>
     </div>
   );
