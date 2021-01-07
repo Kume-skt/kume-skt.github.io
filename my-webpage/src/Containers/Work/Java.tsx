@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "emotion";
-import Topic from "./component/topic";
+
 const java_css = css({
   marginLeft: "10px",
   backgroundColor: "#ffff",
