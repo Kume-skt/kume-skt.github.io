@@ -4,6 +4,8 @@ import Java from "./Java";
 import Js from "./JS";
 import Python from "./Python";
 import AWS from "./aws";
+import ESP from "./esp32";
+import RasPi from "./rspi";
 
 const skillcss = css({
   display: "inline-block",
@@ -48,15 +50,23 @@ function Work() {
       skill_view = <Java />;
       break;
     case skill_list.js:
-      skill_view =  <Js/>;
+      skill_view = <Js />;
       break;
-    
+
     case skill_list.python:
       skill_view = <Python />;
       break;
-    
+
     case skill_list.aws:
       skill_view = <AWS />;
+      break;
+
+    case skill_list.esp:
+      skill_view = <ESP />;
+      break;
+
+    case skill_list.rspi:
+      skill_view = <RasPi />;
       break;
 
     default:
@@ -72,14 +82,33 @@ function Work() {
           >
             Java
           </div>
-                  <div className={listStyle_li}
-                    onClick={() => setsklii(skill_list.js)}
-          
-                  >JavaScript</div>
-          <div className={listStyle_li} onClick={() => setsklii(skill_list.python)}>Python</div>
-          <div className={listStyle_li}onClick={() => setsklii(skill_list.aws)}>AWS</div>
-          <div className={listStyle_li}onClick={() => setsklii(skill_list.esp)} >ESP32</div>
-          <div className={listStyle_li}onClick={() => setsklii(skill_list.rspi)} >ラズベリーパイ</div>
+          <div className={listStyle_li} onClick={() => setsklii(skill_list.js)}>
+            JavaScript
+          </div>
+          <div
+            className={listStyle_li}
+            onClick={() => setsklii(skill_list.python)}
+          >
+            Python
+          </div>
+          <div
+            className={listStyle_li}
+            onClick={() => setsklii(skill_list.aws)}
+          >
+            AWS
+          </div>
+          <div
+            className={listStyle_li}
+            onClick={() => setsklii(skill_list.esp)}
+          >
+            ESP32
+          </div>
+          <div
+            className={listStyle_li}
+            onClick={() => setsklii(skill_list.rspi)}
+          >
+            ラズベリーパイ
+          </div>
         </div>
         {skill_view}
       </div>

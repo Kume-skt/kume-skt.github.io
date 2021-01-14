@@ -49,12 +49,7 @@ function Navbar() {
           </div>
           <div>
             <Link to="/work" className={link_css}>
-              技術
-            </Link>
-          </div>
-          <div>
-            <Link to="/" className={link_css}>
-              home
+              技術　　　　　　
             </Link>
           </div>
         </div>
