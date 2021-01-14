@@ -49,8 +49,14 @@ function Navbar() {
           </div>
           <div>
             <Link to="/work" className={link_css}>
-              技術　　　　　　
+              技術
             </Link>
+          </div>
+          <div>
+          <a href="https://qiita.com/kumemaru" className={link_css}>キータ</a>  
+          </div>
+          <div>
+          <a href="https://github.com/Kume-skt" className={link_css}>GitHub</a>  
           </div>
         </div>
       </div>
